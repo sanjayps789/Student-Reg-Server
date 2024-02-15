@@ -8,7 +8,7 @@ const regServer = express()
 regServer.use(cors())
 regServer.use(express.json())
 regServer.use(router)
-const PORT = 8000
+const PORT = 8000 || process.env.PORT
 regServer.listen(PORT,()=>{
     console.log(`regServer started at port: ${PORT}`);
 })
